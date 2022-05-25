@@ -5,18 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Election</title>
+    <title>Election Results</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div class="container" style="width: 650px;">
       <div class="row">
-        <br>
         <div class="col-lg-12">
-          <h1 id="Title" class="text-center"></h1>
+          <h1 class="text-center">Election Results</h1>
           <hr/>
           <br/>
           <div id="loader">
@@ -26,9 +31,9 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Candidate Name</th>
-                  <th id="Votes" scope="col">Votes</th>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Votes</th>
                 </tr>
               </thead>
               <tbody id="candidatesResults">
@@ -44,12 +49,7 @@
               <button type="submit" class="btn btn-primary">Vote</button>
               <hr />
             </form>
-            <a href="http://127.0.0.1:8000/"><h3 id="Byline" class="text-center"></h3></a>
-            <br>
             <p id="accountAddress" class="text-center"></p>
-            <br>
-            <h5 id="ClosingTime" class="text-center"></h5>
-            <h4 id="RemainingTime" class="text-center"></h4>
           </div>
         </div>
       </div>
