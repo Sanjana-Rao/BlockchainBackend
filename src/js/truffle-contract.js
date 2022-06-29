@@ -7562,15 +7562,6 @@ var sha3 = require("crypto-js/sha3");
 var schema_version = require("./package.json").version;
 
 var TruffleSchema = {
-  // Normalize options passed in to be the exact options required
-  // for truffle-contract.
-  //
-  // options can be three things:
-  // - normal object
-  // - contract object
-  // - solc output
-  //
-  // TODO: Is extra_options still necessary?
   normalizeOptions: function(options, extra_options) {
     extra_options = extra_options || {};
     var normalized = {};

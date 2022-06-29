@@ -5,8 +5,8 @@ App = {
   hasVoted: false,
   closingTime: {
     year: 2022,
-    month: 4,
-    date: 23,
+    month: 5,
+    date: 28,
     hour: 00,
     minutes: 35,
     seconds: 0,
@@ -97,7 +97,7 @@ App = {
       var now = new Date();
 
     loader.show();
-    content.hide
+    content.hide();
     $('#Title').html('Cast your vote!');
     if(now < closingDate)
       $('#Votes').hide();

@@ -12,7 +12,6 @@ contract Election {
     // Store accounts that have voted
     mapping(address => bool) public voters;
     // Store Candidates
-    // Fetch Candidate
     mapping(uint256 => Candidate) public candidates;
     // Store Candidates Count
     uint256 public candidatesCount;
@@ -20,12 +19,9 @@ contract Election {
     // voted event
     event votedEvent(uint256 indexed _candidateId);
 
-    constructor() public {
-        addCandidate("Candidate 1");
-        addCandidate("Candidate 2");
-    }
+    constructor() public {}
 
-    function addCandidate(string memory _name) private {
+    function addCandidate(string memory _name) public {
         candidatesCount++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
     }
